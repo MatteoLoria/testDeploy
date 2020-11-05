@@ -12,7 +12,8 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker build -f Dockerfile .'
+        sh 'docker build -t test_deploy -f Dockerfile .'
+        sh 'docker run -dp 8081:8081 test_deploy'
       }
     }
   }
