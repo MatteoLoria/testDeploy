@@ -1,8 +1,5 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
+  agent any
 
   }
   stages {
@@ -11,6 +8,10 @@ pipeline {
         echo 'Success'
       }
     }
-
+    stage('Deploy') {
+      steps {
+        sh 'docker build -f Dockerfile .'
+      }
+    }
   }
 }
