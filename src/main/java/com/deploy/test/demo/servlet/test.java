@@ -8,7 +8,7 @@ public class test {
 
     @GetMapping(value = "/")
     public String index() {
-        return "hello matteo";
+        return "hello git hook";
     }
 
 }
