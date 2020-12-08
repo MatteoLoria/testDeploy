@@ -17,4 +17,4 @@ foreach(@images) {
 }
 
 `docker build -t test_deploy -f Dockerfile .`;
-`docker run -dp 8081:8081 test_deploy`
+`docker run -d --name test -p 8081:8081 test_deploy`

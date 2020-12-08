@@ -8,7 +8,7 @@ public class test {
 
     @GetMapping(value = "/")
     public String index() {
-        return "perl script is working";
+        return "hello";
     }
 
 }
